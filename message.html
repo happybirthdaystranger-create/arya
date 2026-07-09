@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="message-page">
+
+<audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="message-box">
+
+<h1>Happy Birthday ❤️</h1>
+
+<p>
+
+Selamat ulang tahun yaa.
+
+Hari ini adalah hari spesial buat kamu. Semoga semua hal baik selalu datang menghampiri kamu, semoga setiap langkahmu dipenuhi kebahagiaan, kesehatan, dan keberuntungan.
+
+Aku cuma ingin kamu tahu kalau kehadiranmu pernah menjadi salah satu hal yang paling berharga dalam hidupku. Terima kasih karena pernah hadir, pernah memberi banyak cerita, dan pernah membuat hari-hariku terasa lebih indah.
+
+Walaupun mungkin sekarang semuanya tidak lagi sama, aku tetap mendoakan yang terbaik untukmu.
+
+Semoga semua impianmu satu per satu tercapai.
+
+Semoga orang-orang di sekitarmu selalu menyayangimu.
+
+Semoga kamu selalu diberi kesehatan.
+
+Semoga kamu selalu tersenyum.
+
+Dan semoga suatu hari nanti kamu benar-benar mendapatkan semua kebahagiaan yang pantas kamu dapatkan.
+
+Terima kasih sudah menjadi seseorang yang pernah membuatku percaya bahwa bahagia itu sederhana.
+
+Happy Birthday once again.
+
+Semoga hari ini menjadi awal dari tahun yang penuh kebahagiaan.
+
+❤️❤️❤️
+
+</p>
+
+<div class="next">
+    <button onclick="location.href='ending.html'">
+        ❤️ Lanjut
+    </button>
+</div>
+
+</div>
+
+<div class="hearts"></div>
+
+<script src="script.js"></script>
+
+<script>
+
+const music=document.getElementById("bgMusic");
+
+window.onload=()=>{
+
+music.volume=0.5;
+
+music.play().catch(()=>{});
+
+}
+
+</script>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+window.addEventListener("load", () => {
+
+    music.volume = 0.5;
+
+    const playPromise = music.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch(() => {
+            // Jika browser memblokir autoplay
+            document.body.addEventListener("click", () => {
+                music.play();
+            }, { once: true });
+        });
+    }
+
+});
+</script>
+
+</body>
+
+</html>
